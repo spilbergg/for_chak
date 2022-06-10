@@ -28,22 +28,26 @@
     <loaded-nodes />
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
-    <connection id="53f3a6f4-d787-4086-a978-9cff7d2a3548">
+    <connection id="4886748c-af56-4966-acef-56c6194e2e74">
       <console name="Connection" type="STANDARD" schema="main" session="Main" />
     </connection>
   </component>
   <component name="DBNavigator.Project.DatabaseFileManager">
     <open-files>
-      <object connection-id="53f3a6f4-d787-4086-a978-9cff7d2a3548" object-ref="schemas/main/tables/main_imagebook" />
-      <object connection-id="53f3a6f4-d787-4086-a978-9cff7d2a3548" object-ref="schemas/main/tables/main_book" />
+      <object connection-id="4886748c-af56-4966-acef-56c6194e2e74" object-ref="schemas/main/tables/main_author" />
+      <object connection-id="4886748c-af56-4966-acef-56c6194e2e74" object-ref="schemas/main/tables/main_personreader" />
     </open-files>
   </component>
   <component name="DBNavigator.Project.DatabaseSessionManager">
-    <connection id="53f3a6f4-d787-4086-a978-9cff7d2a3548" />
+    <connection id="4886748c-af56-4966-acef-56c6194e2e74" />
   </component>
   <component name="DBNavigator.Project.DatasetFilterManager">
-    <filter-actions connection-id="53f3a6f4-d787-4086-a978-9cff7d2a3548" dataset="main.main_book" active-filter-id="EMPTY_FILTER" />
-    <filter-actions connection-id="53f3a6f4-d787-4086-a978-9cff7d2a3548" dataset="main.main_imagebook" active-filter-id="EMPTY_FILTER" />
+    <filter-actions connection-id="4886748c-af56-4966-acef-56c6194e2e74" dataset="main.main_book_all_author_book" active-filter-id="EMPTY_FILTER" />
+    <filter-actions connection-id="4886748c-af56-4966-acef-56c6194e2e74" dataset="main.main_book_genre_book" active-filter-id="EMPTY_FILTER" />
+    <filter-actions connection-id="4886748c-af56-4966-acef-56c6194e2e74" dataset="main.main_book" active-filter-id="EMPTY_FILTER" />
+    <filter-actions connection-id="4886748c-af56-4966-acef-56c6194e2e74" dataset="main.main_personreader" active-filter-id="EMPTY_FILTER" />
+    <filter-actions connection-id="4886748c-af56-4966-acef-56c6194e2e74" dataset="main.main_imagebook" active-filter-id="EMPTY_FILTER" />
+    <filter-actions connection-id="4886748c-af56-4966-acef-56c6194e2e74" dataset="main.main_author" active-filter-id="EMPTY_FILTER" />
   </component>
   <component name="DBNavigator.Project.EditorStateManager">
     <last-used-providers />
@@ -74,7 +78,7 @@
   </component>
   <component name="DBNavigator.Project.Settings">
     <connections>
-      <connection id="53f3a6f4-d787-4086-a978-9cff7d2a3548" active="true" signed="true">
+      <connection id="4886748c-af56-4966-acef-56c6194e2e74" active="true" signed="true">
         <database>
           <name value="Connection" />
           <description value="" />
@@ -89,7 +93,7 @@
           <port value="" />
           <database value="" />
           <files>
-            <file path="C:\Users\hanik\Desktop\lib\biblio1\library\db.sqlite3" schema="main" />
+            <file path="C:\Users\hanik\Desktop\lib\libbb\library\db.sqlite3" schema="main" />
           </files>
           <type value="NONE" />
           <user value="" />
