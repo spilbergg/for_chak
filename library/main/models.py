@@ -21,8 +21,8 @@ class Book(models.Model):
 
 
 class Author(models.Model):
-    first_name = models.CharField(max_length=30, verbose_name='')
-    last_name = models.CharField(max_length=50, verbose_name='')
+    first_name = models.CharField(max_length=30, verbose_name='Имя')
+    last_name = models.CharField(max_length=50, verbose_name='Фамилия')
     foto_author = models.ImageField(upload_to='images', verbose_name='Фотография автора')
 
     def __str__(self):
@@ -48,7 +48,7 @@ class PersonReader(models.Model):
     first_name = models.CharField(max_length=50, verbose_name='Фамилия')
     last_name = models.CharField(max_length=50, verbose_name='Имя')
     patronymic = models.CharField(max_length=50, verbose_name='Отчество', null=True)
-    number_passport = models.CharField(max_length=9, verbose_name='Отчество', unique=True)
+    number_passport = models.CharField(max_length=9, verbose_name='номер паспорта', unique=True)
     date_birthday = models.DateField(verbose_name='дата рождения')
     email = models.EmailField(verbose_name='Email')
     residential_address = models.CharField(max_length=100, verbose_name='Адрес проживания', null=True)
