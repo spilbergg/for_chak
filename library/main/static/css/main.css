@@ -1,16 +1,16 @@
 body{
     background: url(../images/background_main_page.jpg);
-    background-size: 35%;
+    background-size: 50%;
     margin: 0;
     padding: 0;
 }
 #menu{
-    margin: 0;
+    margin: 0 auto;
     padding: 10px;
     list-style-type: none;
     border: 1px solid #000000;
     border-radius: 15px;
-    width: 100%;
+    width: 98%;
     color: #960688f7;
     font-size: 16px;
     background-color: #825252f6;
