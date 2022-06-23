@@ -5,7 +5,7 @@ from django.db import models
 class Book(models.Model):
     name_book_rus = models.CharField(max_length=100, verbose_name='Название книги')
     name_book_origin = models.CharField(max_length=100, null=True, blank=True, verbose_name='Оригинальное название')
-    genre_book = models.ManyToManyField('Genre')
+    genre_book = models.ManyToManyField('Genre', verbose_name='Жанры книг')
     price_book = models.DecimalField(max_digits=6, decimal_places=2, verbose_name='Цена')
     count_book = models.IntegerField(verbose_name='Количество')
     all_author_book = models.ManyToManyField('Author', verbose_name='Все авторы книги')
@@ -26,11 +26,11 @@ class Author(models.Model):
     foto_author = models.ImageField(upload_to='images', verbose_name='Фотография автора')
 
     def __str__(self):
-        return self.last_name
+        return f'{self.last_name} {self.first_name}'
 
 
 class Genre(models.Model):
-    name_genre = models.CharField(max_length=30)
+    name_genre = models.CharField(max_length=30, verbose_name='', unique=True)
 
     def __str__(self):
         return self.name_genre
