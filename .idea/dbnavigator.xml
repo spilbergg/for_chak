@@ -18,7 +18,6 @@
       <destination value="FILE" />
       <format value="EXCEL" />
       <charset value="windows-1251" />
-      <charset value="windows-1251" />
     </export-instructions>
   </component>
   <component name="DBNavigator.Project.DatabaseBrowserManager">
@@ -33,10 +32,7 @@
     </connection>
   </component>
   <component name="DBNavigator.Project.DatabaseFileManager">
-    <open-files>
-      <object connection-id="4886748c-af56-4966-acef-56c6194e2e74" object-ref="schemas/main/tables/main_author" />
-      <object connection-id="4886748c-af56-4966-acef-56c6194e2e74" object-ref="schemas/main/tables/main_personreader" />
-    </open-files>
+    <open-files />
   </component>
   <component name="DBNavigator.Project.DatabaseSessionManager">
     <connection id="4886748c-af56-4966-acef-56c6194e2e74" />
@@ -135,7 +131,7 @@
           <alternative-statement-delimiter value="" />
         </details>
         <object-filters hide-empty-schemas="false" hide-pseudo-columns="false">
-          <object-type-filter>
+          <object-type-filter use-master-settings="true">
             <object-type name="SCHEMA" enabled="true" />
             <object-type name="USER" enabled="true" />
             <object-type name="ROLE" enabled="true" />
