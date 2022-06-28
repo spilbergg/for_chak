@@ -1,6 +1,8 @@
 body{
-    background: url(../images/background_main_page.jpg);
-    background-size: 50%;
+
+    background: url(data:image/jpeg;base64,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);
+    background-size: auto;
+
     margin: 0;
     padding: 0;
 }
@@ -39,7 +41,7 @@ body{
     align-items: center;
     width: 100%;
     height:100px;
-    border:1px solid dark-grey;
+    border:1px solid darkgrey;
     border-radius: 15px;
     background: #6e0d64f7;
 }
@@ -66,4 +68,80 @@ block{
     box-shadow: 4px 4px 7px #826370fc;
 }
 
+.popup{
+    position: fixed;
+    width: 50%;
+    height: 30%;
+    background-color: rgba(0, 0, 0, 0.86);
+    top: 0;
+    left: 25%;
+    opacity: 0;
+    visibility: hidden;
+}
+.popup:target{
+    opacity: 1;
+    visibility: visible;
+}
+.popup__body{
+    min-height: 100%;
+    display: flex;
+    align-items: center;
+    /*justify-items: center;*/
+    justify-content: center;
+    padding: 10px 10px;
+}
 
+.popup__context{
+    background-color: rgba(255, 255, 255, 0.68);
+    color: black;
+    padding: 15px 10px;
+    text-align: center;
+    position: relative;
+}
+.popup__close{
+    position: absolute;
+    top: 3px;
+    right: 3px;
+    font-size: small;
+    color: black;
+    text-decoration-color: black;
+}
+
+/*.add__book{*/
+/*    position: relative;*/
+/*}*/
+.popup__genre{
+    font-size: 30px;
+    position: absolute;
+    top: 260px;
+    left: 60px;
+    border: #cc3300;
+}
+.popup__genre__click{
+    text-decoration: none;
+}
+
+.popup__authors{
+    font-size: 30px;
+    position: absolute;
+    top: 430px;
+    left: 95px;
+    border: #cc3300;
+}
+.popup__authors__click{
+    text-decoration: none;
+}
+#popup1{
+    position: fixed;
+    width: 50%;
+    height: 50%;
+    background-color: rgba(0, 0, 0, 0.86);
+    top: 0;
+    left: 25%;
+    opacity: 0;
+    visibility: hidden;
+}
+#popup1:target {
+    opacity: 1;
+    visibility: visible;
+}

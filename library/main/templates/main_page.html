@@ -7,8 +7,9 @@
      <link rel="stylesheet" href="{% static 'css/main.css' %}">
 </head>
 <body>
+
 <header id = "header">
-    <a href="{%url 'lib:main_page'%}"><img src="{% static 'images/background_main_page.jpg' %}" alt="" class = "header__logo"></a>
+    <a href="{% url 'lib:main_page' %}"><img src="{% static 'images/background_main_page.jpg' %}" alt="" class = "header__logo"></a>
     <block>Biblioteka</block>
 </header>
 
@@ -20,7 +21,29 @@
     <li><a href="">выдача книги</a></li>
     <li><a href="">прием книги</a></li>
     <li><a href="">список читателей</a></li>
-    <li><a href="">поиск книги</a></li>
+{#    <li><a href="">поиск книги</a></li>#}
+	<form action="" method="get">
+		<input size="4" type="search" name="search">
+		<button >искать</button>
+	</form>
+
 </ul>
+{% block content %}
+
+		{% for f in books %}
+			{{ f.name_book_rus }}
+			{% for g in f.genre_book.all %}
+			{{ g.name_genre }}
+			{% endfor %}
+			{{ f.count_book }}
+			{{ f.count_book }}
+			{% for i in f.imagebook_set.all %}
+				{% if i.photo_book.url %}
+				<img src="{{ i.photo_book.url }}"/>
+				{% endif %}
+			{% endfor %}
+		{% endfor %}
+
+{% endblock %}
 </body>
 </html>
