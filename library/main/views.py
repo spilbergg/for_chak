@@ -2,7 +2,9 @@ from django.shortcuts import render, redirect
 from django.template.defaulttags import url
 
 from .forms import BookForm, ImageBookForm, PersonReaderForm, Author_form, BookFormGenre, BookFormAuthors
-from .models import Book, ImageBook
+
+from .models import Book, ImageBook, PersonReader
+
 
 
 def page_index(request):
@@ -110,3 +112,10 @@ def add_author(request):
                 'error': erorr,
             }
     return render(request, 'author_form.html', context)
+
+def readers_page(request):
+    readers = PersonReader.objects.all()
+    context = {
+        'readers':readers
+    }
+    return render(request, 'reades_page.html', context)
