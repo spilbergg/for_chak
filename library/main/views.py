@@ -2,7 +2,9 @@ from django.shortcuts import render, redirect
 from django.template.defaulttags import url
 
 from .forms import BookForm, ImageBookForm, PersonReaderForm, Author_form, BookFormGenre, BookFormAuthors
+
 from .models import Book, ImageBook, PersonReader
+
 
 
 def page_index(request):

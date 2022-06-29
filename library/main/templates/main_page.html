@@ -22,7 +22,9 @@
     <li><a href="{% url 'lib:add_author' %}">добавление автора</a></li>
     <li><a href="">выдача книги</a></li>
     <li><a href="">прием книги</a></li>
+
     <li><a href="{% url 'lib:readers_page'%}">список читателей</a></li>
+
 {#    <li><a href="">поиск книги</a></li>#}
 	<form action="" method="get">
 		<input size="4" type="search" name="search">
@@ -33,19 +35,18 @@
 {% block content %}
 
 		{% for f in books %}
-<div style="width: 1000px; display:flex; padding: 10px; justify-content: spacearound;">
-			<p>{{ f.name_book_rus }}   </p>
+
+			{{ f.name_book_rus }}
 			{% for g in f.genre_book.all %}
-			<p>{{ g.name_genre }}   </p>
+			{{ g.name_genre }}
 			{% endfor %}
-			<p>{{ f.count_book }} </p>
-			<p>{{ f.count_book }} </p>
+			{{ f.count_book }}
+			{{ f.count_book }}
 			{% for i in f.imagebook_set.all %}
 				{% if i.photo_book.url %}
-				<p><img src="{{ i.photo_book.url }}" width="200" height="222"/></p>
+				<img src="{{ i.photo_book.url }}"/>
 				{% endif %}
 			{% endfor %}
-	</div>
 		{% endfor %}
 
 {% endblock %}

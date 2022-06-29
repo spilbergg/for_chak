@@ -2,6 +2,7 @@ from django.urls import path
 
 from .views import page_index, image_add, main_page, add_reader, add_author, book_genre_popup_add, book_author_popup_add, readers_page
 
+
 app_name = 'lib'
 
 urlpatterns = [
