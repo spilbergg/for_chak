@@ -7,8 +7,11 @@
      <link rel="stylesheet" href="{% static 'css/main.css' %}">
 </head>
 <body>
+
 <header id = "header">
-    <a href="{%url 'lib:main_page'%}"><img src="{% static 'images/background_main_page.jpg' %}" alt="" class = "header__logo"></a>
+
+    <a href="{% url 'lib:main_page' %}"><img src="{% static 'images/background_main_page.jpg' %}" alt="" class = "header__logo"></a>
+
     <block>Biblioteka</block>
 </header>
 
@@ -19,8 +22,32 @@
     <li><a href="{% url 'lib:add_author' %}">добавление автора</a></li>
     <li><a href="">выдача книги</a></li>
     <li><a href="">прием книги</a></li>
-    <li><a href="">список читателей</a></li>
-    <li><a href="">поиск книги</a></li>
+    <li><a href="{% url 'lib:readers_page'%}">список читателей</a></li>
+{#    <li><a href="">поиск книги</a></li>#}
+	<form action="" method="get">
+		<input size="4" type="search" name="search">
+		<button >искать</button>
+	</form>
+
 </ul>
+{% block content %}
+
+		{% for f in books %}
+<div style="width: 1000px; display:flex; padding: 10px; justify-content: spacearound;">
+			<p>{{ f.name_book_rus }}   </p>
+			{% for g in f.genre_book.all %}
+			<p>{{ g.name_genre }}   </p>
+			{% endfor %}
+			<p>{{ f.count_book }} </p>
+			<p>{{ f.count_book }} </p>
+			{% for i in f.imagebook_set.all %}
+				{% if i.photo_book.url %}
+				<p><img src="{{ i.photo_book.url }}" width="200" height="222"/></p>
+				{% endif %}
+			{% endfor %}
+	</div>
+		{% endfor %}
+
+{% endblock %}
 </body>
 </html>
