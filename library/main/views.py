@@ -1,10 +1,9 @@
 from django.shortcuts import render, redirect
 from django.template.defaulttags import url
-
+from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from .forms import BookForm, ImageBookForm, PersonReaderForm, Author_form, BookFormGenre, BookFormAuthors
 
 from .models import Book, ImageBook, PersonReader
-
 
 
 def page_index(request):
@@ -48,7 +47,6 @@ def book_author_popup_add(request):
     return redirect('lib:page_index')
 
 
-
 def image_add(request):
     form = ImageBookForm()
     context = {
@@ -69,11 +67,15 @@ def image_add(request):
 
 def main_page(request):
     books = Book.objects.all()
-    print(dir(Book))
-    context={
-        'books':books,
-    }
-    return render(request, 'main_page.html', context)
+    paginator = Paginator(books, 1)
+    page_number = request.GET.get('page', 1)
+    try:
+        page_obj = paginator.get_page(page_number)
+    except PageNotAnInteger:
+        page_obj = paginator.get_page(1)
+    except EmptyPage:
+        page_obj = paginator.get_page(paginator.num_pages)
+    return render(request, 'main_page.html', {'page_obj':page_obj})
 
 
 def add_reader(request):
@@ -112,6 +114,7 @@ def add_author(request):
                 'error': erorr,
             }
     return render(request, 'author_form.html', context)
+
 
 def readers_page(request):
     readers = PersonReader.objects.all()
